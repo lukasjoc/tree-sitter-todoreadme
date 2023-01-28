@@ -1,0 +1,29 @@
+{
+  "name": "tree-sitter-todoreadme",
+  "version": "0.1.0",
+  "description": "Tree-sitter Grammar/Parser for todoreadme",
+  "main": "bindings/node",
+  "scripts": {
+    "lint": "eslint --fix grammar.js",
+    "gen": "tree-sitter generate; node-gyp build",
+    "validate": "tree-sitter test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukasjoc/todoreadme.git"
+  },
+  "author": "lukasjoc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lukasjoc/todoreadme/issues"
+  },
+  "homepage": "https://github.com/lukasjoc/todoreadme#readme",
+  "dependencies": {
+    "nan": "^2.17.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.32.0",
+    "node-gyp": "^9.3.1",
+    "tree-sitter-cli": "^0.20.7"
+  }
+}
