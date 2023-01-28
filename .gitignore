@@ -1,2 +1,7 @@
 node_modules/
 build/
+src/
+bindings/
+Cargo.*
+*.gyp
+
