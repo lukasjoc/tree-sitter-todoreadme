@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint --fix grammar.js",
     "gen": "tree-sitter generate; node-gyp build",
-    "validate": "tree-sitter test"
+    "validate": "tree-sitter test",
+    "parse": "tree-sitter parse --"
   },
   "repository": {
     "type": "git",
