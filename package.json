@@ -5,9 +5,8 @@
   "main": "bindings/node",
   "scripts": {
     "lint": "eslint --fix grammar.js",
-    "gen": "tree-sitter generate; node-gyp build",
-    "validate": "tree-sitter test",
-    "parse": "tree-sitter parse --"
+    "build": "tree-sitter generate; node-gyp build",
+    "test": "tree-sitter test"
   },
   "repository": {
     "type": "git",

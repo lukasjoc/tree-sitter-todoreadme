@@ -116,7 +116,7 @@
     },
     "text": {
       "type": "PATTERN",
-      "value": ".*"
+      "value": "(.|\\n)*"
     }
   },
   "extras": [
