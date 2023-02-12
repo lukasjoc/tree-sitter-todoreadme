@@ -1,13 +1,13 @@
 ; highlights.scm
 
 ; Main Blocks
-(identifier) @identifier
-(end_header) @identifier
+(identifier) @todoreadmeHeader
+(end_header) @todoreadmeHeader
 
 ; Categories
-(category_identifier) @type
+(category_identifier) @todoreadmeCategory
 
 ; Delims
-(begin_wrapped_text) @delimiter
-(begin_li) @delimiter
+(begin_wrapped_text) @todoreadmeDelimiter
+(begin_li) @todoreadmeDelimiter
 

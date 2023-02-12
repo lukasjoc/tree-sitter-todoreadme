@@ -401,9 +401,10 @@
     "globalconfig": "/home/lukasjoc/.config/nvm/versions/node/v18.13.0/etc/npmrc",
     "init_module": "/home/lukasjoc/.npm-init.js",
     "prefix": "/home/lukasjoc/.config/nvm/versions/node/v18.13.0",
-    "user_agent": "npm/8.19.3 node/v18.13.0 linux x64 workspaces/false",
+    "user_agent": "pnpm/7.25.1 npm/? node/v18.13.0 linux x64",
     "metrics_registry": "https://registry.npmjs.org/",
     "node_gyp": "/home/lukasjoc/.config/nvm/versions/node/v18.13.0/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js",
-    "global_prefix": "/home/lukasjoc/.config/nvm/versions/node/v18.13.0"
+    "global_prefix": "/home/lukasjoc/.config/nvm/versions/node/v18.13.0",
+    "registry": "https://registry.npmjs.org/"
   }
 }
