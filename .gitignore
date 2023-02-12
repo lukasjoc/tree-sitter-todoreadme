@@ -1,3 +1,4 @@
 node_modules/
-build/
 log.html
+testfiles/TODO.tor
+testfiles/README.tor

@@ -5,7 +5,7 @@ task: test singe line
 ---
 (source_file
     (block
-        (header (standard_header (identifier)))
+        (start_of_line (standard_header (identifier)))
         (text)))
 
 ==================
@@ -18,13 +18,13 @@ later: for later
 
 (source_file
     (block
-        (header (standard_header (identifier)))
+        (start_of_line (standard_header (identifier)))
         (text))
     (block
-        (header (standard_header (identifier)))
+        (start_of_line (standard_header (identifier)))
         (text))
     (block
-        (header (standard_header (identifier)))
+        (start_of_line (standard_header (identifier)))
         (text)))
 
 
@@ -34,7 +34,7 @@ single block with some text on a single line and a category header section
 task[foorbar,bazz]: test singe line
 ---
 (source_file
-    (block (header
+    (block (start_of_line
         (category_header (identifier)
             (categories
                 (category (category_identifier))
@@ -48,13 +48,13 @@ task[foorbar,bazz]: test singe line
 task[other,fizz,]: test singe line.. hah trailing comma
 ---
 (source_file
-    (block (header
+    (block (start_of_line
         (category_header (identifier)
             (categories
                 (category (category_identifier))
                 (category (category_identifier)))))
         (text))
-    (block (header
+    (block (start_of_line
         (category_header (identifier)
             (categories
                 (category (category_identifier))
