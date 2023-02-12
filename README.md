@@ -1,4 +1,4 @@
 # todoreadme
 
-> todoreadme grammar + simple parser from tree-sitter
+> todoreadme grammar for tree-sitter
 
