@@ -61,6 +61,10 @@
           "named": true
         },
         {
+          "type": "end_header",
+          "named": true
+        },
+        {
           "type": "identifier",
           "named": true
         }
@@ -72,9 +76,13 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "begin_li",
+          "named": true
+        },
         {
           "type": "text",
           "named": true
@@ -102,9 +110,13 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "end_header",
+          "named": true
+        },
         {
           "type": "identifier",
           "named": true
@@ -144,9 +156,13 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "begin_wrapped_text",
+          "named": true
+        },
         {
           "type": "text",
           "named": true
@@ -155,11 +171,11 @@
     }
   },
   {
-    "type": ",",
+    "type": " ",
     "named": false
   },
   {
-    "type": ":",
+    "type": ",",
     "named": false
   },
   {
@@ -171,7 +187,19 @@
     "named": false
   },
   {
+    "type": "begin_li",
+    "named": true
+  },
+  {
+    "type": "begin_wrapped_text",
+    "named": true
+  },
+  {
     "type": "category_identifier",
+    "named": true
+  },
+  {
+    "type": "end_header",
     "named": true
   },
   {
@@ -181,9 +209,5 @@
   {
     "type": "text",
     "named": true
-  },
-  {
-    "type": "| ",
-    "named": false
   }
 ]

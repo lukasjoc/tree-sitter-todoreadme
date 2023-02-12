@@ -1,107 +1,182 @@
-==================
+================================================================================
 single block with some text on a single line
-==================
+================================================================================
 task: test singe line
----
-(source_file
-    (block
-        (start_of_line (standard_header (identifier)))
-        (text)))
+--------------------------------------------------------------------------------
 
-==================
+(source_file
+  (block
+    (start_of_line
+      (standard_header
+        (identifier)
+        (end_header)))
+    (text)))
+
+================================================================================
 multiple blocks with some text on a single line
-==================
+================================================================================
 task: thing to do
 idea: some idea
 later: for later
----
+--------------------------------------------------------------------------------
 
 (source_file
-    (block
-        (start_of_line (standard_header (identifier)))
-        (text))
-    (block
-        (start_of_line (standard_header (identifier)))
-        (text))
-    (block
-        (start_of_line (standard_header (identifier)))
-        (text)))
+  (block
+    (start_of_line
+      (standard_header
+        (identifier)
+        (end_header)))
+    (text))
+  (block
+    (start_of_line
+      (standard_header
+        (identifier)
+        (end_header)))
+    (text))
+  (block
+    (start_of_line
+      (standard_header
+        (identifier)
+        (end_header)))
+    (text)))
 
-
-==================
+================================================================================
 single block with some text on a single line and a category header section
-==================
+================================================================================
 task[foorbar,bazz]: test singe line
----
-(source_file
-    (block (start_of_line
-        (category_header (identifier)
-            (categories
-                (category (category_identifier))
-                (category (category_identifier)))))
-        (text)))
+--------------------------------------------------------------------------------
 
-==================
+(source_file
+  (block
+    (start_of_line
+      (category_header
+        (identifier)
+        (categories
+          (category
+            (category_identifier))
+          (category
+            (category_identifier)))
+        (end_header)))
+    (text)))
+
+================================================================================
 multiple blocks with some text on a single line and a category header section
-==================
+================================================================================
 task[foorbar,bazz]: test singe line
 task[other,fizz,]: test singe line.. hah trailing comma
----
-(source_file
-    (block (start_of_line
-        (category_header (identifier)
-            (categories
-                (category (category_identifier))
-                (category (category_identifier)))))
-        (text))
-    (block (start_of_line
-        (category_header (identifier)
-            (categories
-                (category (category_identifier))
-                (category (category_identifier)))))
-        (text)))
+--------------------------------------------------------------------------------
 
-==================
+(source_file
+  (block
+    (start_of_line
+      (category_header
+        (identifier)
+        (categories
+          (category
+            (category_identifier))
+          (category
+            (category_identifier)))
+        (end_header)))
+    (text))
+  (block
+    (start_of_line
+      (category_header
+        (identifier)
+        (categories
+          (category
+            (category_identifier))
+          (category
+            (category_identifier)))
+        (end_header)))
+    (text)))
+
+================================================================================
 single block with list points
-==================
+================================================================================
 task: foor bar
 - foo bar some foo and
 - some bar
----
-(source_file
-    (block (start_of_line (standard_header (identifier))) (text))
-    (block (start_of_line (li (text))) (text))
-    (block (start_of_line (li (text))) (text)) )
+--------------------------------------------------------------------------------
 
-==================
+(source_file
+  (block
+    (start_of_line
+      (standard_header
+        (identifier)
+        (end_header)))
+    (text))
+  (block
+    (start_of_line
+      (li
+        (begin_li)
+        (text)))
+    (text))
+  (block
+    (start_of_line
+      (li
+        (begin_li)
+        (text)))
+    (text)))
+
+================================================================================
 single block with wrapped text
-==================
+================================================================================
 task: foor bar
 | this needed wrapping because foo bar
----
+--------------------------------------------------------------------------------
+
 (source_file
-    (block (start_of_line (standard_header (identifier))) (text))
-    (block (start_of_line (wrapped_text (text))) (text)) )
+  (block
+    (start_of_line
+      (standard_header
+        (identifier)
+        (end_header)))
+    (text))
+  (block
+    (start_of_line
+      (wrapped_text
+        (begin_wrapped_text)
+        (text)))
+    (text)))
 
-
-==================
+================================================================================
 single block with wrapped text combined with list point blocks
-==================
+================================================================================
 task: foor bar
 | this needed wrapping because foo bar
 - foo
 - ! bar
----
+--------------------------------------------------------------------------------
+
 (source_file
-    (block (start_of_line (standard_header (identifier))) (text))
-    (block (start_of_line (wrapped_text (text))) (text))
-    (block (start_of_line (li (text))) (text))
-    (block (start_of_line (li (text))) (text)) )
+  (block
+    (start_of_line
+      (standard_header
+        (identifier)
+        (end_header)))
+    (text))
+  (block
+    (start_of_line
+      (wrapped_text
+        (begin_wrapped_text)
+        (text)))
+    (text))
+  (block
+    (start_of_line
+      (li
+        (begin_li)
+        (text)))
+    (text))
+  (block
+    (start_of_line
+      (li
+        (begin_li)
+        (text)))
+    (text)))
 
-
-==================
+================================================================================
 multiple blocks with wrapped text combined with list point blocks combined with blocks with categories
-==================
+================================================================================
 task[foo,bar]: foor bar
 task[lol,eee]: [._0]
 | wowers
@@ -115,28 +190,88 @@ task: foor bar
 - foo
 - ! bar
 
----
+--------------------------------------------------------------------------------
+
 (source_file
-    (block (start_of_line (category_header (identifier)
-            (categories
-                (category (category_identifier))
-                (category (category_identifier))))) (text))
-
-    (block (start_of_line
-        (category_header (identifier)
-            (categories
-                (category (category_identifier))
-                (category (category_identifier))))) (text))
-    (block (start_of_line (wrapped_text (text))) (text))
-    (block (start_of_line (li (text))) (text))
-
-    (block (start_of_line (standard_header (identifier))) (text))
-    (block (start_of_line (wrapped_text (text))) (text))
-    (block (start_of_line (li (text))) (text))
-    (block (start_of_line (li (text))) (text))
-
-    (block (start_of_line (standard_header (identifier))) (text))
-    (block (start_of_line (wrapped_text (text))) (text))
-    (block (start_of_line (li (text))) (text))
-    (block (start_of_line (li (text))) (text)) )
-
+  (block
+    (start_of_line
+      (category_header
+        (identifier)
+        (categories
+          (category
+            (category_identifier))
+          (category
+            (category_identifier)))
+        (end_header)))
+    (text))
+  (block
+    (start_of_line
+      (category_header
+        (identifier)
+        (categories
+          (category
+            (category_identifier))
+          (category
+            (category_identifier)))
+        (end_header)))
+    (text))
+  (block
+    (start_of_line
+      (wrapped_text
+        (begin_wrapped_text)
+        (text)))
+    (text))
+  (block
+    (start_of_line
+      (li
+        (begin_li)
+        (text)))
+    (text))
+  (block
+    (start_of_line
+      (standard_header
+        (identifier)
+        (end_header)))
+    (text))
+  (block
+    (start_of_line
+      (wrapped_text
+        (begin_wrapped_text)
+        (text)))
+    (text))
+  (block
+    (start_of_line
+      (li
+        (begin_li)
+        (text)))
+    (text))
+  (block
+    (start_of_line
+      (li
+        (begin_li)
+        (text)))
+    (text))
+  (block
+    (start_of_line
+      (standard_header
+        (identifier)
+        (end_header)))
+    (text))
+  (block
+    (start_of_line
+      (wrapped_text
+        (begin_wrapped_text)
+        (text)))
+    (text))
+  (block
+    (start_of_line
+      (li
+        (begin_li)
+        (text)))
+    (text))
+  (block
+    (start_of_line
+      (li
+        (begin_li)
+        (text)))
+    (text)))
