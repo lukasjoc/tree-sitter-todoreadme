@@ -14,7 +14,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "header"
+          "name": "start_of_line"
         },
         {
           "type": "SYMBOL",
@@ -22,7 +22,7 @@
         }
       ]
     },
-    "header": {
+    "start_of_line": {
       "type": "CHOICE",
       "members": [
         {
@@ -32,6 +32,14 @@
         {
           "type": "SYMBOL",
           "name": "category_header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "li"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "wrapped_text"
         }
       ]
     },
@@ -112,7 +120,33 @@
     },
     "category_identifier": {
       "type": "PATTERN",
-      "value": "[a-zA-Z0-9-_:@#]+"
+      "value": "[a-zA-Z0-9-_]+"
+    },
+    "li": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "- "
+        },
+        {
+          "type": "SYMBOL",
+          "name": "text"
+        }
+      ]
+    },
+    "wrapped_text": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "| "
+        },
+        {
+          "type": "SYMBOL",
+          "name": "text"
+        }
+      ]
     },
     "text": {
       "type": "PATTERN",

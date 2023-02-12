@@ -1,2 +1,5 @@
 src/
+testfiles/
+build/
+bindings/
 node_modules/
