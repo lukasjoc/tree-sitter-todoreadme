@@ -27,7 +27,7 @@ module.exports = grammar({
         categories: $ => seq("[", repeat1($.category), "]"),
         category: $ => seq($.category_identifier, optional(",")),
 
-        identifier: _$ => /(current|task|idea|later)/,
+        identifier: _$ => /(current|task|idea|later|til)/,
         category_identifier: _$ => /[a-zA-Z0-9-_]+/,
 
         li: $ => seq($.begin_li, " ", $.text),

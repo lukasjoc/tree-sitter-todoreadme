@@ -120,7 +120,7 @@
     },
     "identifier": {
       "type": "PATTERN",
-      "value": "(current|task|idea|later)"
+      "value": "(current|task|idea|later|til)"
     },
     "category_identifier": {
       "type": "PATTERN",
