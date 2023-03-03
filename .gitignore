@@ -3,3 +3,4 @@ log.html
 testfiles/TODO.tor
 testfiles/README.tor
 build/
+target/
